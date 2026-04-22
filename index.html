@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Β. Μαρούγκας - Γ. Παναγιωτίδης Ο.Ε. | Λογιστικό Γραφείο Ζάκυνθος</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#0f172a',
+                        ionian: '#0ea5e9',
+                        slate: {
+                            850: '#1e293b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        '4xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.1) 0, transparent 50%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: fade-up 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-midnight selection:bg-ionian selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex flex-col leading-tight">
+                <span class="font-bold text-xl tracking-tight text-midnight">Μαρούγκας - Παναγιωτίδης</span>
+                <span class="text-[10px] uppercase tracking-[0.2em] font-medium text-ionian">Λογιστικό & Φοροτεχνικό Γραφείο</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#services" class="text-sm font-medium hover:text-ionian transition-colors">Υπηρεσίες</a>
+                <a href="#about" class="text-sm font-medium hover:text-ionian transition-colors">Το Γραφείο</a>
+                <a href="#contact" class="text-sm font-medium hover:text-ionian transition-colors">Επικοινωνία</a>
+                <a href="tel:2695025705" class="bg-midnight text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-850 hover:shadow-lg transition-all flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    2695025705
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-midnight"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-40 pb-24 md:pt-56 md:pb-40 hero-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl animate-fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-ionian/10 border border-ionian/20 text-ionian text-sm font-semibold mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-ionian animate-pulse"></span>
+                    Κορυφαία Αξιολόγηση 5.0/5 στη Google
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-8">
+                    Άψογη Λογιστική & <br>
+                    <span class="text-gradient">Φοροτεχνική Υποστήριξη</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl">
+                    Εμπιστευτείτε την επιχείρηση και τα οικονομικά σας στο πιο αξιόπιστο γραφείο της Ζακύνθου. 
+                    Άμεση επικοινωνία με τον <span class="text-white font-medium">Βασίλη Μαρούγκα</span> και τον <span class="text-white font-medium">Γιώργο Παναγιωτίδη</span> για υπεύθυνη και έγκυρη ενημέρωση.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:2695025705" class="bg-ionian text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-sky-400 shadow-xl shadow-ionian/20 transition-all flex items-center justify-center gap-3">
+                        Καλέστε μας
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-sm font-bold text-ionian uppercase tracking-[0.2em] mb-4">Υπηρεσίες</h2>
+                <h3 class="text-4xl md:text-5xl font-bold tracking-tight">Ολοκληρωμένες λύσεις <br>για κάθε ανάγκη</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Service 1 -->
+                <div class="md:col-span-8 group p-10 bg-white rounded-4xl border border-slate-100 hover:border-ionian/30 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 flex flex-col justify-between overflow-hidden relative">
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-ionian/10 rounded-2xl flex items-center justify-center mb-8 text-ionian">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14h6"/><path d="M9 18h6"/><path d="M9 10h6"/></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">Φορολογικές Δηλώσεις</h4>
+                        <p class="text-slate-500 text-lg leading-relaxed max-w-md">Σχεδιασμός και υποβολή φορολογικών δηλώσεων για ιδιώτες και επιχειρήσεις με απόλυτη ακρίβεια και συνέπεια.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="md:col-span-4 p-10 bg-midnight text-white rounded-4xl hover:shadow-2xl hover:shadow-midnight/20 transition-all duration-500">
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8 text-ionian">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Μηχανογράφηση</h4>
+                    <p class="text-slate-400 text-lg leading-relaxed">Σύγχρονη μηχανογραφική υποστήριξη για την πλήρη ψηφιακή οργάνωση της επιχείρησής σας.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="md:col-span-4 p-10 bg-white rounded-4xl border border-slate-100 hover:border-ionian/30 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500">
+                    <div class="w-14 h-14 bg-ionian/10 rounded-2xl flex items-center justify-center mb-8 text-ionian">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-midnight">Τήρηση Βιβλίων</h4>
+                    <p class="text-slate-500 text-lg leading-relaxed">Οργάνωση και επίβλεψη λογιστηρίων όλων των κατηγοριών με έμφαση στη λεπτομέρεια.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="md:col-span-8 p-10 bg-midnight text-white rounded-4xl hover:shadow-2xl hover:shadow-midnight/20 transition-all duration-500 flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl shrink-0 flex items-center justify-center text-ionian">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold mb-3">Πλήρης Φοροτεχνική Υποστήριξη</h4>
+                        <p class="text-slate-400 text-lg leading-relaxed">Εξειδικευμένες συμβουλές για τη θωράκιση της επιχείρησής σας απέναντι στις διαρκείς αλλαγές της νομοθεσίας.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Reviews Section -->
+    <section id="about" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-sm font-bold text-ionian uppercase tracking-[0.2em] mb-6">Το Γραφείο μας</h2>
+                    <h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-8">Προσωπική εξυπηρέτηση και επαγγελματισμός</h3>
+                    <p class="text-slate-400 text-xl leading-relaxed mb-8">
+                        Στο γραφείο των <span class="text-white font-medium">Βασίλη Μαρούγκα</span> και <span class="text-white font-medium">Γιώργου Παναγιωτίδη</span>, πιστεύουμε στην προσωπική επαφή. 
+                        Είμαστε Λογιστές Β' τάξης με πολυετή εμπειρία και πάθος για την άρτια υποστήριξη του πελάτη.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <div class="flex -space-x-4">
+                            <div class="w-12 h-12 rounded-full border-2 border-midnight bg-slate-800 flex items-center justify-center font-bold text-ionian">BM</div>
+                            <div class="w-12 h-12 rounded-full border-2 border-midnight bg-slate-800 flex items-center justify-center font-bold text-ionian">ΓΠ</div>
+                        </div>
+                        <p class="text-sm text-slate-500 font-medium tracking-wide">Πάντα δίπλα σας με υπευθυνότητα.</p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -top-10 -left-10 text-ionian/10">
+                        <svg width="200" height="200" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.017 7V5C14.017 4.44772 14.4647 4 15.017 4H20.017C21.1216 4 22.017 4.89543 22.017 6V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM2.01698 21L2.01698 18C2.01698 16.8954 2.91241 16 4.01698 16H7.01698C7.56926 16 8.01698 15.5523 8.01698 15V9C8.01698 8.44772 7.56926 8 7.01698 8H3.01698C2.4647 8 2.01698 7.55228 2.01698 7V5C2.01698 4.44772 2.4647 4 3.01698 4H8.01698C9.12155 4 10.017 4.89543 10.017 6V15C10.017 18.3137 7.33066 21 4.01698 21H2.01698Z"/></svg>
+                    </div>
+                    <div class="p-8 md:p-12 bg-white/5 backdrop-blur-xl border border-white/10 rounded-4xl relative z-10">
+                        <div class="flex gap-1 mb-6">
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-yellow-400">★</span>
+                        </div>
+                        <blockquote class="text-2xl md:text-3xl font-medium leading-tight mb-8">
+                            "Καταπληκτικό λογιστικό γραφείο... Με άψογη εξυπηρέτηση και πλήρη, έγκυρη ενημέρωση για τα πάντα. Σε ενημερώνουν για όλα!"
+                        </blockquote>
+                        <div class="flex items-center gap-4">
+                            <div class="w-1 w-12 h-[1px] bg-ionian"></div>
+                            <span class="font-bold text-ionian tracking-wide">GOOGLE REVIEW</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h2 class="text-sm font-bold text-ionian uppercase tracking-[0.2em] mb-6">Επικοινωνία</h2>
+                    <h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-10">Είμαστε εδώ για <br>να σας βοηθήσουμε</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6 p-8 bg-slate-50 rounded-3xl group hover:bg-ionian/5 transition-colors">
+                            <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-ionian shadow-sm shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Διεύθυνση</h4>
+                                <p class="text-xl font-bold">Ανδρέα Κάλβου 80, Ζάκυνθος, Τ.Κ. 291 00</p>
+                            </div>
+                        </div>
+
+                        <a href="tel:2695025705" class="flex items-start gap-6 p-8 bg-slate-50 rounded-3xl group hover:bg-ionian/5 transition-colors">
+                            <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-ionian shadow-sm shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Τηλέφωνο</h4>
+                                <p class="text-3xl font-bold text-midnight group-hover:text-ionian transition-colors">2695025705</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rounded-4xl overflow-hidden shadow-2xl shadow-slate-200 border-8 border-white h-[500px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.319349845347!2d20.89311497670732!3d37.78255907198305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x136746864195764d%3A0xc3f3f06e300ac13!2zzpHOvc60z4HOrc6xIM6azqzOu86yzr_PhSA4MCwgzpbOrM66z4XOvc64zr_PgiAyOTEgMDA!5e0!3m2!1sel!2sgr!4v1713812000000!5m2!1sel!2sgr" 
+                        class="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <span class="font-bold text-lg text-midnight tracking-tight">Μαρούγκας - Παναγιωτίδης</span>
+                    <p class="text-sm text-slate-500 mt-1">© 2024. Με επιφύλαξη παντός δικαιώματος.</p>
+                </div>
+                
+                <div class="flex items-center gap-8">
+                    <p class="text-xs text-slate-400 font-medium">DEVELOPED BY <span class="text-midnight">WebBnb</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
